@@ -11,7 +11,7 @@ class AboutSection extends StatelessWidget {
       child: Card(
         margin: const EdgeInsets.only(
           top: 20,
-          bottom: 0,
+          bottom: 20,
           right: 20,
           left: 20,
         ),
