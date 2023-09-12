@@ -12,10 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const ProfilePage(),
+      home: ProfilePage(),
     );
   }
 }
@@ -53,17 +52,20 @@ class _ProfilePageState extends State<ProfilePage> {
           titleTextStyle: const TextStyle(
             color: Colors.white,
           ),
-          toolbarHeight: 255,
-          title: Column(
-            children: [
-              profilePhotos(),
-              profileName(),
-              hobbies(),
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0),
-                child: stats(),
-              ),
-            ],
+          toolbarHeight: 275,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 35.0),
+            child: Column(
+              children: [
+                profilePhotos(),
+                profileName(),
+                hobbies(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: stats(),
+                ),
+              ],
+            ),
           ),
           bottom: TabBar(
             tabs: tabs,
